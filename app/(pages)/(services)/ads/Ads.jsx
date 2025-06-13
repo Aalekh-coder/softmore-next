@@ -1,6 +1,7 @@
 
 "use client"
 
+import Form from "@/components/Form";
 import FormDilog from "@/components/Layout/FormDilog";
 import Button from "@/components/miniComp/button/Button";
 import {
@@ -112,9 +113,7 @@ const AdService = () => {
             Request A Free Quote
           </button> */}
 
-          {/* <FormDilog> */}
-            <Button text={"Request A Free Quote"} />
-          {/* </FormDilog> */}
+         <Form />
         </div>
       </div>
 
@@ -184,9 +183,7 @@ const AdService = () => {
             Request A Free Quote
           </button> */}
 
-          {/* <FormDilog> */}
-            <Button text={"Request A Free Quote"} />
-          {/* </FormDilog> */}
+         <Form />
         </div>
       </div>
 
@@ -239,13 +236,7 @@ const AdService = () => {
             <CircleCheckBig color="blue" /> Scalable Campaigns
           </p>
 
-          {/* <button className="border-blue-800 border-[4px] px-7 py-3 rounded-3xl my-5 lg:ml-9 hover:bg-violet-500 hover:text-white font-bold hover:border-white">
-            Request A Free Quote
-          </button> */}
-
-          {/* <FormDilog> */}
-            <Button text={"Request A Free Quote"} />
-          {/* </FormDilog> */}
+          <Form />
         </div>
       </div>
     </>

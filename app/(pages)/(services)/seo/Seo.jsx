@@ -1,4 +1,5 @@
 "use client"
+import Form from "@/components/Form";
 import Button from "@/components/miniComp/button/Button";
 import {
   BanknoteArrowUp,
@@ -137,13 +138,7 @@ const Seo = () => {
             our marketing experts today for a free consultation!
           </p>
 
-          {/* <button className="font-medium border-gray-800 border-[4px] px-7 py-3 rounded-3xl my-5 lg:ml-9">
-            Request A Free Quote
-          </button> */}
-
-          {/* <FormDilog> */}
-            <Button text={"Request A Free Quote"} />
-          {/* </FormDilog> */}
+          <Form />
         </div>
       </div>
 
@@ -177,9 +172,7 @@ const Seo = () => {
           {/* <button className="font-medium border-white border-[4px] px-7 py-3 rounded-3xl my-5 lg:ml-9 bg-gradient-to-r from-rose-500 to-blue-500 text-white">
             Request A Free Quote
           </button> */}
-          {/* <FormDilog> */}
-            <Button text={"Request A Free Quote"} />
-          {/* </FormDilog> */}
+          <Form />
         </div>
       </div>
 

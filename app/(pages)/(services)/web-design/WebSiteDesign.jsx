@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Button from "@/components/miniComp/button/Button";
 import FormDilog from "@/components/Layout/FormDilog";
+import Form from "@/components/Form";
 
 const WebSiteDesign = () => {
   const cardUI = [
@@ -129,9 +130,7 @@ const WebSiteDesign = () => {
           design solutions that drive impactful conversions.
         </p>
         
-        {/* <FormDilog> */}
-          <Button text={"Request A Free Quote"} />
-        {/* </FormDilog> */}
+        <Form />
         <div className="lg:-mt-24 lg:px-32">
           <img src="../servicePage.png" alt="" />
         </div>
@@ -160,12 +159,7 @@ const WebSiteDesign = () => {
             align with your business objectives.
           </p>
 
-          {/* <button className="md:mt-4 bg-gradient-to-r from-violet-600 to-rose-600 px-7 py-3 rounded-3xl font-bold text-white lg:px-12 lg:py-4 lg:text-2xl shadow-lg shadow-slate-500">
-            Request A Free Quote
-          </button> */}
-          {/* <FormDilog> */}
-          <Button text={"Request A Free Quote"} />
-        {/* </FormDilog> */}
+          <Form />
         </div>
         <div>
           <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-rows-2 md:px-20 mt-10">

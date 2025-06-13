@@ -71,5 +71,5 @@ export default Summery;
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.3, duration: 0.8 }}
 >
-  We Don’t Just Build Websites—We Build Sales Machines
+  We Don’t Just Build Websites — We Build Sales Machines
 </motion.p>;

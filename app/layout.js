@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +19,14 @@ export const metadata = {
   title: "India's No. 1 Digital Marketing Agency in Delhi | Softmore IT",
 
   // Main page description
-  description: "Get ahead of the competition with our digital marketing services. Our agency specializes in SEO, PPC, social media, and more. Contact us today for a personalized strategy to help your business succeed",
+  description:
+    "Get ahead of the competition with our digital marketing services. Our agency specializes in SEO, PPC, social media, and more. Contact us today for a personalized strategy to help your business succeed",
 
   // Open Graph metadata for social media sharing
   openGraph: {
     title: "India's No. 1 Digital Marketing Agency in Delhi | Softmore IT",
-    description: "Get ahead of the competition with our digital marketing services. Our agency specializes in SEO, PPC, social media, and more. Contact us today for a personalized strategy to help your business succeed",
+    description:
+      "Get ahead of the competition with our digital marketing services. Our agency specializes in SEO, PPC, social media, and more. Contact us today for a personalized strategy to help your business succeed",
     images: [
       {
         url: "https://www.softmoreit.co.in/img/banner/banner-3.jpg", // OG image URL
@@ -45,10 +48,7 @@ export const metadata = {
   robots: {
     index: false,
     follow: false,
-   
   },
-
-  
 };
 
 export default function RootLayout({ children }) {
@@ -57,9 +57,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Toaster position="top-center" reverseOrder={false} />
+        <Footer />
       </body>
     </html>
   );
