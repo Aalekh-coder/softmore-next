@@ -1,6 +1,19 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
+export const metadata = {
+  // Page title for the browser tab and search results
+  title: "Terms and Conditions - Softmore IT Solution",
+
+  // Meta description for search engine snippets
+  description: "Terms and Conditions governing the use of services provided by Softmore IT Solution, a website designing and digital marketing company.",
+
+  // Canonical URL to prevent duplicate content issues
+  alternates: {
+    canonical: "https://www.softmoreit.co.in/terms-conditions",
+  },
+
+};
 
 export default function TermsPage() {
   return (
