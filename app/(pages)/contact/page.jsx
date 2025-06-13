@@ -1,20 +1,12 @@
 import { Button } from "@/components/ui/button";
-// import team from "../assets/contactus/teams.jpg";
 import { Card } from "@/components/ui/card";
-// import teamMeeting from "@/assets/contactus/teamMeeting.jpg";
 import { ArrowRight, PhoneCall } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div className="overflow-x-hidden">
-      {/* first section  */}
       <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:mt-24">
-        {/* text  */}
-        <div
-
-          className="px-7 py-5 lg:w-1/2 lg:px-14"
-        >
+        <div className="px-7 py-5 lg:w-1/2 lg:px-14">
           <h1 className="text-center font-bold text-4xl text-purple-950 lg:text-7xl lg:text-left">
             Contact Us
           </h1>
@@ -30,21 +22,14 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* for image  */}
-        <div
-       
-          className="relative right-8 lg:w-1/2"
-        >
+        <div className="relative right-8 lg:w-1/2">
           <img src="./contact/teams.jpg" className="rounded-r-full right-5" />
         </div>
       </div>
 
       {/* second section  */}
       <div className="lg:flex lg:w-full lg:px-20 mt-8">
-        <div
-         
-          className="px-5 mt-14 lg:w-[60vw]"
-        >
+        <div className="px-5 mt-14 lg:w-[60vw]">
           <h2 className="text-center text-4xl font-bold text-purple-950">
             Get in Touch With Our Team!
           </h2>
@@ -108,34 +93,27 @@ const Contact = () => {
           </form>
         </div>
 
-        <div
-         
-          className="px-5 py-5 lg:w-1/3"
-        >
+        <div className="px-5 py-5 lg:w-1/3">
           <Card className="overflow-hidden rounded-3xl">
             <img src="./contact/teamMeeting.jpg" className="" />
             <p className="px-7 text-3xl font-bold mt-7">Take The Next Step</p>
             <p className="px-7 text-gray-400 text-lg mt-3">
               Ditch the Slow Website
             </p>
-<a href={`tel:${"+919266474766"}`} >
-
-            <Button className="bg-gradient-to-r from-sky-600 to-pink-600 mx-5 my-6 flex items-center">
-              Get in Touch <ArrowRight />
-            </Button>
-</a>
+            <a href={`tel:${"+919266474766"}`}>
+              <Button className="bg-gradient-to-r from-sky-600 to-pink-600 mx-5 my-6 flex items-center">
+                Get in Touch <ArrowRight />
+              </Button>
+            </a>
           </Card>
         </div>
       </div>
 
       {/* last section  */}
 
-      <div
-        
-        className="mx-7 text-center lg:my-20"
-      >
+      <div className="mx-7 text-center lg:my-20">
         <p className="text-4xl font-bold my-8 md:text-5xl">Give Us A Call</p>
-        <a className="block" href={`tel:${"+919266474766"}`} >
+        <a className="block" href={`tel:${"+919266474766"}`}>
           <Button className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 rounded-xl px-10 py-5 text-lg md:px-14 md:py-6">
             Call Us <PhoneCall />
           </Button>
