@@ -1,5 +1,5 @@
 import { PhoneOutgoing } from 'lucide-react'
-import {easeIn, motion} from "framer-motion"
+
 
 const Chat = () => {
   return (
