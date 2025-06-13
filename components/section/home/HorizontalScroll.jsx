@@ -94,9 +94,9 @@ const HorizontalScroll = () => {
 
   return (
     <>
-      <h1 className="font-bold text-3xl px-3 md:px-16 md:text-4xl bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mt-10 lg:px-5 lg:text-5xl lg:mb-10 lg:text-center">
+      <h2 className="font-bold text-3xl px-3 md:px-16 md:text-4xl bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mt-10 lg:px-5 lg:text-5xl lg:mb-10 lg:text-center">
         Our Approach to Getting Things Done
-      </h1>
+      </h2>
       <p className="px-3 text-sm font-semibold md:px-16 md:text-lg lg:text-center lg:px-32">
         Discover the behind-the-scenes journey of our custom web design process.
         We craft tailored websites for brands of all sizes, delivering impactful

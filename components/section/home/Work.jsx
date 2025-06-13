@@ -35,9 +35,9 @@ const Work = () => {
     <div className="px-2 py-10 lg:mt-16">
       <div className="flex flex-col items-start md:flex-row md:gap-5 md:px-5 lg:px-20 lg:gap-24">
         <div>
-          <h1 className="font-semibold text-2xl my-2 bg-gradient-to-r from-pink-500 to-rose-500 text-transparent bg-clip-text lg:text-4xl">
+          <h2 className="font-semibold text-2xl my-2 bg-gradient-to-r from-pink-500 to-rose-500 text-transparent bg-clip-text lg:text-4xl">
             Experience the Impact of Our Designs in Our Portfolio
-          </h1>
+          </h2>
           <p className="text-gray-700">
             Our specialists have worked across all industries, delivering
             engaging UI/UX designs. To learn more about our UI/UX design

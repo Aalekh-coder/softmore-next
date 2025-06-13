@@ -77,9 +77,9 @@ const WebProcess = () => {
 
   return (
     <div className="w-full" ref={targetRef}>
-      <h1 className="font-bold text-3xl px-3 md:px-16 md:text-4xl bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mt-10 lg:px-5 lg:text-5xl lg:mb-10 lg:text-center">
+      <h2 className="font-bold text-3xl px-3 md:px-16 md:text-4xl bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mt-10 lg:px-5 lg:text-5xl lg:mb-10 lg:text-center">
         Our Approach to Getting Things Done
-      </h1>
+      </h2>
       <p className="px-3 text-sm font-semibold md:px-16 md:text-lg lg:text-center lg:px-32">
         At the heart of everything we do is a clear, purposeful approach to making progress — not just moving fast, but moving smart. Our process is designed to be flexible, collaborative, and results-driven. Here’s how we make things happen
       </p>
