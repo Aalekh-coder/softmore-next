@@ -1,13 +1,12 @@
 
-import {
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+// import {
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import { Accordion } from "@radix-ui/react-accordion";
+// import { Accordion } from "@radix-ui/react-accordion";
 import { AppWindow, AtSign, CheckCheck, ChevronRight, Flame, Megaphone } from "lucide-react";
-import React from "react";
 
 const Pricing = () => {
   const services = [

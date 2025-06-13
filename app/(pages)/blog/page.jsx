@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Eye, Heart, MessageSquareText } from "lucide-react";
-import React from "react";
+
 
 const Blog = () => {
   const blogData = [

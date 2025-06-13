@@ -1,6 +1,3 @@
-import React from "react";
-import { motion } from "framer-motion";
-
 export const metadata = {
   // Page title for the browser tab and search results
   title: "Privacy Policy - Softmore IT Solution",
