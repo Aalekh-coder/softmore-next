@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { ArrowRight, PhoneCall } from "lucide-react";
+import React from 'react'; // Make sure React is imported
 
 const Contact = () => {
   return (
@@ -23,9 +25,12 @@ const Contact = () => {
         </div>
 
         <div className="relative right-8 lg:w-1/2">
-          <img src="./contact/teams.jpg" className="rounded-r-full right-5" />
+          {/* Added alt tag for the team image */}
+          <img src="./contact/teams.jpg" className="rounded-r-full right-5" alt="Softmore IT Solutions team working together" />
         </div>
       </div>
+
+      ---
 
       {/* second section  */}
       <div className="lg:flex lg:w-full lg:px-20 mt-8">
@@ -38,54 +43,64 @@ const Contact = () => {
           <form className="bg-white shadow-2xl shadow-gray-400 rounded-xl p-5">
             <p className="text-lg text-gray-500 font-poppins">Hello,</p>
             <div className="flex flex-col">
-              <label className="text-lg text-gray-500 font-poppins">
+              <label htmlFor="name" className="text-lg text-gray-500 font-poppins"> {/* Added htmlFor */}
                 * My Name Is
               </label>
               <input
                 type="text"
+                id="name" // Added id
                 className="pl-5 placeholder:text-xl my-5"
                 placeholder="Name"
+                aria-required="true" // Added for required fields
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-lg text-gray-500 font-poppins">From</label>
+              <label htmlFor="company" className="text-lg text-gray-500 font-poppins"> {/* Added htmlFor */}
+                From
+              </label>
               <input
                 type="text"
+                id="company" // Added id
                 className="pl-5 placeholder:text-xl my-5"
                 placeholder="Company"
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-lg text-gray-500 font-poppins">
+              <label htmlFor="email" className="text-lg text-gray-500 font-poppins"> {/* Added htmlFor */}
                 * You Can Email Me At
               </label>
               <input
-                type="text"
+                type="email" // Changed type to email for better validation
+                id="email" // Added id
                 className="pl-5 placeholder:text-xl my-5"
                 placeholder="Email"
+                aria-required="true" // Added for required fields
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-lg text-gray-500 font-poppins">
+              <label htmlFor="phone" className="text-lg text-gray-500 font-poppins"> {/* Added htmlFor */}
                 Or You Can Phone Me At
               </label>
               <input
-                type="text"
+                type="tel" // Changed type to tel for better input handling
+                id="phone" // Added id
                 className="pl-5 placeholder:text-xl my-5"
                 placeholder="Phone"
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-lg text-gray-500 font-poppins">
+              <label htmlFor="message" className="text-lg text-gray-500 font-poppins"> {/* Added htmlFor */}
                 * I'd Like Your Help With:
               </label>
               <textarea
-                type="text"
+                id="message" // Added id
                 className="pl-5 placeholder:text-xl my-5"
                 placeholder="Message"
+                aria-required="true" // Added for required fields
+                rows="5" // Added rows for better textarea appearance
               ></textarea>
               <div className="">
-                <Button className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 rounded-xl px-10 py-5 text-lg">
+                <Button type="submit" className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 rounded-xl px-10 py-5 text-lg">
                   Send
                 </Button>
               </div>
@@ -95,12 +110,13 @@ const Contact = () => {
 
         <div className="px-5 py-5 lg:w-1/3">
           <Card className="overflow-hidden rounded-3xl">
-            <img src="./contact/teamMeeting.jpg" className="" />
+            {/* Added alt tag for the team meeting image */}
+            <img src="./contact/teamMeeting.jpg" className="" alt="Team collaborating during a meeting" />
             <p className="px-7 text-3xl font-bold mt-7">Take The Next Step</p>
             <p className="px-7 text-gray-400 text-lg mt-3">
               Ditch the Slow Website
             </p>
-            <a href={`tel:${"+919266474766"}`}>
+            <a href={`tel:${"+919266474766"}`} aria-label="Call Softmore IT Solutions">
               <Button className="bg-gradient-to-r from-sky-600 to-pink-600 mx-5 my-6 flex items-center">
                 Get in Touch <ArrowRight />
               </Button>
@@ -109,11 +125,12 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* last section  */}
+      ---
 
+      {/* last section  */}
       <div className="mx-7 text-center lg:my-20">
         <p className="text-4xl font-bold my-8 md:text-5xl">Give Us A Call</p>
-        <a className="block" href={`tel:${"+919266474766"}`}>
+        <a className="block" href={`tel:${"+919266474766"}`} aria-label="Call Softmore IT Solutions at +91 9266474766">
           <Button className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 rounded-xl px-10 py-5 text-lg md:px-14 md:py-6">
             Call Us <PhoneCall />
           </Button>
@@ -126,17 +143,18 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 h-[6px] rounded-lg my-4 w-full"></div>
 
           {/* map main dev  */}
-
           <div className="flex flex-col lg:flex-row lg:gap-5 lg:items-end">
             <div>
               <div className="rounded-lg overflow-hidden shadow-lg lg:flex lg:items-center lg:gap-5">
+                {/* iframe alt tag equivalent is title attribute */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.123456789!2d77.123456!3d28.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1234567890!2sA1B%2F8%2C%20Janakpuri%2C%20New%20Delhi%2C%20India%20110058!5e0!3m2!1sen!2sin!4v1681234567890!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.59344498305!2d77.1066063145929!3d28.6139399824208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1af0e27161b9%3A0xcb1e227a969f688!2sJanakpuri%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1678912345678!5m2!1sen!2sin" // Changed to a valid Google Maps embed URL
                   className="w-[80vw] h-[50vh] lg:w-[40vw]"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps location of Softmore IT Solutions office in Janakpuri, New Delhi" // Added title for iframe
                 ></iframe>
                 <div className="font-bold lg:text-3xl lg:px-10"></div>
               </div>

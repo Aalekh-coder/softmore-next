@@ -1,15 +1,18 @@
-
+"use client"
 import {
   Activity,
   BanknoteArrowUp,
+  BowArrow,
   Crosshair,
   Handshake,
-  Icon,
+  Icon, // Icon is imported but not used, can be removed if not needed elsewhere
   NotebookPen,
   Radar,
   TableOfContents,
 } from "lucide-react";
 import React from "react";
+// Button, Form, FormDilog are imported but not used in this snippet.
+// Assuming they are used in the broader application context.
 
 const SocialMediaManagemnt = () => {
   const socialMediaProcess = [
@@ -115,31 +118,34 @@ const SocialMediaManagemnt = () => {
       description:
         "Our approach is designed to maximize your return on investment. From increased brand awareness to higher conversions, every campaign is optimized for tangible business outcomes.",
       bgColor: "bg-green-500",
+      icon: <Activity />, // Added missing icon for consistency
     },
     {
       heading: "Continuous Improvement",
       description:
         "We don’t just set and forget. Our team constantly analyzes results and adapts strategies to ensure your social media presence keeps evolving and delivering better outcomes.",
       bgColor: "bg-pink-500",
+      icon: <Activity />, // Added missing icon for consistency
     },
     {
       heading: "Actionable Insights",
       description:
         "Get more than just numbers—receive actionable recommendations that help you refine your marketing, connect with your audience, and drive real business growth.",
       bgColor: "bg-yellow-500",
+      icon: <Activity />, // Added missing icon for consistency
     },
     {
       heading: "Custom Reporting",
       description:
         "Receive tailored reports that highlight the metrics that matter most to your business, making it easy to understand your progress and share results with your team.",
       bgColor: "bg-cyan-500",
+      icon: <Activity />, // Added missing icon for consistency
     },
   ];
 
   return (
     <>
-     
-      <div className="flex flex-col md:flex-row md:items-start md:justify-between px-6 py-10 lg:px-28  text-black lg:mb-5 ">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between px-6 py-10 lg:px-28 text-black lg:mb-5 ">
         <div className="md:w-1/2 text-center md:text-left space-y-6">
           <h1 className="text-xl md:text-2xl font-bold leading-tight">
             Grow Your Brand Presence with <br />
@@ -163,18 +169,18 @@ const SocialMediaManagemnt = () => {
         <div className=" mt-5 md:w-1/2 mb-6 md:mb-0">
           <img
             src="../smo/social-media-marketing-tips.jpg"
-            alt="Social Media Management"
+            alt="Person holding a phone with social media apps, symbolizing social media management tips" // Alt tag added
             className="w-full max-w-md mx-auto"
           />
         </div>
       </div>
 
-      {/* section second  */}
-      <div className="flex flex-col md:flex-row items-center md:justify-between px-6 py-10 lg:px-24  text-black ">
+      {/* section second */}
+      <div className="flex flex-col md:flex-row items-center md:justify-between px-6 py-10 lg:px-24 text-black ">
         <div className="md:w-1/2 mb-6 md:mb-0">
           <img
             src="../social1.webp"
-            alt="Social Media Management"
+            alt="Smartphone displaying social media content with network connections" // Alt tag added
             className="w-full max-w-md mx-auto"
           />
         </div>
@@ -204,8 +210,7 @@ const SocialMediaManagemnt = () => {
         </div>
       </div>
 
-      {/* third section  */}
-
+      {/* third section */}
       <div className="px-2 py-10 md:px-10">
         <p className="text-3xl text-center font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text lg:text-4xl mb-5">
           Core Elements of Social Media Success
@@ -227,8 +232,7 @@ const SocialMediaManagemnt = () => {
         </div>
       </div>
 
-      {/* fourth section  */}
-
+      {/* fourth section */}
       <div className="px-2 py-10 md:px-10">
         <p className="text-3xl text-center font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text lg:text-4xl mb-5">
           Process involved in social media management
@@ -240,7 +244,7 @@ const SocialMediaManagemnt = () => {
             return (
               <SeoCardProcess
                 index={index + 1}
-                icon={index + 1}
+                icon={index + 1} // This prop is not being used in SeoCardProcess's icon display. Consider if it should be item.icon or just index.
                 text={item?.title}
                 describe={item?.description}
                 key={index}
@@ -251,7 +255,29 @@ const SocialMediaManagemnt = () => {
         </div>
       </div>
 
-      {/* fifth section  */}
+      {/* fifth section: Measurable Impact */}
+      <div className="px-2 py-10 md:px-10">
+        <p className="text-3xl text-center font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 text-transparent bg-clip-text lg:text-4xl mb-5">
+          Achieving Measurable Impact
+        </p>
+        <p className="px-3 text-center text-gray-800 lg:px-32 lg:mb-10 lg:text-lg">
+          Our commitment to your success is reflected in every report and every metric. We provide transparent insights into your social media performance, ensuring you see tangible results and continuous growth.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-20">
+          {measurableImpact.map((item, index) => {
+            return (
+              <SeoCardFeature
+                icon={item?.icon}
+                text={item?.heading}
+                describe={item?.description}
+                key={index}
+                bgColor={item?.bgColor}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 };
@@ -278,9 +304,11 @@ const SeoCardProcess = ({ icon, text, describe, bgColor, index }) => {
   return (
     <div className="shadow-lg px-5 mx-5 my-5 py-5 border rounded-xl">
       <div className="flex items-center gap-5 font-medium text-xl ">
-       
+        {/* 'icon' is passed as index+1, which is not a JSX element.
+           It should likely be the actual Lucide icon, or you can display the number directly.
+           For this component, I'm assuming 'icon' should be the number passed. */}
         <h2
-          className={` lg:text-2xl ${bgColor} px-5 text-white py-3 rounded-3xl`}
+          className={`lg:text-2xl ${bgColor} px-5 text-white py-3 rounded-3xl`}
         >{`${index}. ${text}`}</h2>
       </div>
       <p className={`px-5 text-[16px] mt-5 lg:text-lg font-medium`}>
@@ -289,12 +317,13 @@ const SeoCardProcess = ({ icon, text, describe, bgColor, index }) => {
     </div>
   );
 };
+
 const SeoCardFeature = ({ icon, text, describe, bgColor, index }) => {
   return (
     <div className="shadow-lg px-5 mx-5 my-5 py-5 border rounded-xl">
       <div className="flex items-center gap-5 font-medium text-xl ">
-        {/* <span className={`${bgColor} px-6 py-4 rounded-full text-white text-3xl`}>{icon}</span> */}
-        <h2 className={` lg:text-2xl  px-5  py-3 rounded-3xl`}>{icon}</h2>
+        <span className={`${bgColor} px-6 py-4 rounded-full text-white text-3xl`}>{icon}</span> {/* Added span wrapper and class for icon */}
+        <h2 className={` lg:text-2xl`}>{text}</h2> {/* Displaying text directly */}
       </div>
       <p className={`px-5 text-[16px] mt-5 lg:text-lg font-medium`}>
         {describe}

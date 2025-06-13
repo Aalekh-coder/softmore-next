@@ -1,7 +1,19 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Eye, Heart, MessageSquareText } from "lucide-react";
+"use client"
+import {
+  Button
+} from "@/components/ui/button";
+import {
+  Card
+} from "@/components/ui/card";
+import {
+  Input
+} from "@/components/ui/input";
+import {
+  Eye,
+  Heart,
+  MessageSquareText
+} from "lucide-react";
+import React from 'react'; // Ensure React is imported if not already
 
 
 const Blog = () => {
@@ -107,6 +119,7 @@ const Blog = () => {
           placeholder="Search blog..."
           className="my-5 px-5 h-[10vh] "
           type="text"
+          aria-label="Search blog posts" // Added for accessibility
         />
         <Button className="absolute top-3 left-[210px] bg-blue-500 rounded-full md:left-[550px] lg:left-[1050px]">
           Search
@@ -118,7 +131,7 @@ const Blog = () => {
           All Blog
         </span>
         <span className="bg-blue-600 px-4 py-2 rounded-full font-medium text-white">
-          Al Chat Development
+          AI Chat Development
         </span>
         <span className="bg-blue-600 px-4 py-2 rounded-full font-medium text-white">
           AI Development
@@ -133,7 +146,15 @@ const Blog = () => {
 
       <div className="px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 lg:px-24">
         {blogData?.map((item, index) => (
-          <BlogCard comment={item?.comment} decription={item?.decription} img={item?.img} like={item?.like} title={item?.title} view={item?.view} key={index}/>
+          <BlogCard
+            comment={item?.comment}
+            decription={item?.decription}
+            img={item?.img}
+            like={item?.like}
+            title={item?.title}
+            view={item?.view}
+            key={index}
+          />
         ))}
       </div>
     </div>
@@ -146,7 +167,10 @@ const BlogCard = ({ img, title, decription, like, comment, view }) => {
   return (
     <div>
       <Card className="my-10 overflow-hidden">
-        <img src={img ? img : "../blog/digital_marking.jpg"} />
+        <img
+          src={img ? img : "../blog/digital_marking.jpg"}
+          alt={title ? `Image for blog post: ${title}` : "Generic blog post image"} // Alt tag added
+        />
         <p className="px-5 font-medium text-xl">
           {title ? title : "Blog Title"}
         </p>

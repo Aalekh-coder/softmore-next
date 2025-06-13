@@ -1,6 +1,6 @@
 "use client"
-import Form from "@/components/Form";
-import Button from "@/components/miniComp/button/Button";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   BanknoteArrowUp,
   BowArrow,
@@ -14,6 +14,7 @@ import {
   ShoppingBag,
   Users,
 } from "lucide-react";
+import React from "react"; // Ensure React is imported
 
 
 const Seo = () => {
@@ -28,7 +29,7 @@ const Seo = () => {
       icons: (
         <HandPlatter className={`bg-emerald-500 h-14 w-14 p-3 rounded-full`} />
       ),
-      title: "Experianced Team",
+      title: "Experienced Team", // Corrected typo: Experianced -> Experienced
       describe:
         "Our passionate digital strategists, SEO expert, content wizard and eCommerce paid media expert are ready to unleash your brand's potential.",
     },
@@ -110,11 +111,10 @@ const Seo = () => {
   ];
   return (
     <>
-    
-      {/* first  */}
+      {/* First Section: SEO Services Introduction */}
       <div className="flex flex-col md:flex-row-reverse md:px-8 md:py-10 lg:px-16">
         <div className="px-5 md:w-1/2">
-          <img src="../seo.png" alt="SeoImage" />
+          <img src="../seo.png" alt="SEO Services illustration showing growth and ranking" />
         </div>
 
         <div className="text-center md:w-1/2 lg:text-left">
@@ -142,12 +142,13 @@ const Seo = () => {
         </div>
       </div>
 
-      {/* second  */}
+      {/* Second Section: Customized Digital Strategies */}
       <div className="flex flex-col-reverse md:flex-row md:px-8 md:py-10 lg:px-16 lg:items-center">
         <div className="px-5 md:w-1/2 ">
           <img
             src="../seo2.jpg"
             className="lg:rounded-se-full rounded-t-full rounded-b-full"
+            alt="Person working on laptop with digital graphs and data, representing customized digital strategies"
           />
         </div>
 
@@ -169,18 +170,14 @@ const Seo = () => {
             strengthen your brand.
           </p>
 
-          {/* <button className="font-medium border-white border-[4px] px-7 py-3 rounded-3xl my-5 lg:ml-9 bg-gradient-to-r from-rose-500 to-blue-500 text-white">
-            Request A Free Quote
-          </button> */}
           <Form />
         </div>
       </div>
 
-      {/* third div  */}
-
+      {/* Third Section: Why Choose Us for SEO */}
       <div>
         <p className="px-1 text-center my-8 text-2xl font-medium lg:text-5xl lg:px-[20rem] lg:mt-14">
-          Why Choose Use{" "}
+          Why Choose Us{" "} {/* Corrected typo: Use -> Us */}
           <span className="text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text font-bold">
             As Your Search Engine Optimization
           </span>{" "}
@@ -210,20 +207,23 @@ const Seo = () => {
             <img
               src="../dart.jpg"
               className=" rounded-full mt-8 lg:h-[300px] "
+              alt="Dartboard with dart in the bullseye, symbolizing precision targeting in marketing"
             />
             <img
               src="../teams.jpg"
               className=" rounded-full mt-8 lg:h-[300px] lg:absolute bottom-44 left-52 border-[10px] border-white "
+              alt="Happy team members collaborating in an office setting"
             />
             <img
               src="../startup.jpg"
               className=" rounded-full mt-8 lg:h-[300px] lg:mt-20"
+              alt="Diverse group of startup employees celebrating success"
             />
           </div>
         </div>
       </div>
 
-      {/* forth div  */}
+      {/* Fourth Section: Our Creative Search Engine Optimization (re-using the title/description from another section) */}
       <div className="mt-10">
         <p className="px-1 text-center my-8 text-2xl font-medium lg:text-5xl lg:px-[20rem] lg:mt-14">
           Our Creative{" "}
@@ -257,32 +257,39 @@ const Seo = () => {
             <img
               src="../SeoPage/e-commerce.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:my-0 lg:border-white lg:border-[5px]"
+              alt="E-commerce shopping cart and online transaction illustration"
             />
             <img
               src="../SeoPage/e-mail.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:my-0 lg:absolute lg:left-48 lg:top-52 lg:border-white lg:border-[5px]"
+              alt="Email icon on a screen, representing email marketing"
             />
             <img
               src="../SeoPage/group-of-people.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:border-white lg:border-[5px]"
+              alt="Group of diverse people collaborating, symbolizing teamwork"
             />
 
-            {/* secons section  */}
+            {/* second section of images */}
             <img
               src="../SeoPage/money-3115981_1280.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:my-0 lg:border-white lg:border-[5px]"
+              alt="Money flowing into a hand, symbolizing profit or investment returns"
             />
             <img
               src="../SeoPage/seo.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:my-0 absolute lg:left-52 lg:top-[1060px] lg:border-white lg:border-[5px]"
+              alt="SEO concept with search bar and increasing graph"
             />
             <img
               src="../SeoPage/social-media.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:my-32 lg:border-white lg:border-[5px]"
+              alt="Social media icons on a phone screen, representing social media marketing"
             />
             <img
               src="../SeoPage/stamp.jpg"
               className=" rounded-full mt-8 lg:h-[300px] md:my-32 lg:absolute lg:my-0 lg:left-52 lg:top-[1460px] lg:border-white lg:border-[5px]"
+              alt="Rubber stamp with 'Approved' or 'Certified' text"
             />
           </div>
         </div>

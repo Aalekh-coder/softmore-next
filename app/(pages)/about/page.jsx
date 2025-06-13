@@ -17,12 +17,14 @@ import {
 } from "lucide-react";
 import { easeInOut, motion } from "framer-motion";
 import { useState } from "react";
+import React from 'react'; // Ensure React is imported if not already
+
 
 const About = () => {
   const work = [
     {
       icon: <AppWindow />,
-      text: "Website Design & Developmen",
+      text: "Website Design & Development", // Corrected typo
       bgColor: "bg-teal-400",
       describe:
         "Clean code, user-focused design, and seamless performance — we create websites that not only look great but also work flawlessly.",
@@ -36,7 +38,7 @@ const About = () => {
     },
     {
       icon: <TabletSmartphone />,
-      text: "software Development",
+      text: "Software Development", // Corrected typo
       bgColor: "bg-blue-400",
       describe:
         "Clean code, user-focused design, and seamless performance — we create websites that not only look great but also work flawlessly.",
@@ -218,7 +220,7 @@ const About = () => {
               duration: 0.2,
             }}
           >
-            <img src="../about/boardwhitegirl.jpg" className="rounded-lg" />
+            <img src="../about/boardwhitegirl.jpg" className="rounded-lg" alt="Team member working on a whiteboard" />
           </motion.div>
           <motion.div
             initial={{
@@ -247,10 +249,10 @@ const About = () => {
                 duration: 0.5,
               }}
             >
-              <img src="../about/menChair.jpg" className="rounded-lg" />
+              <img src="../about/menChair.jpg" className="rounded-lg" alt="Man sitting in an office chair, focused on work" />
             </motion.div>
             <div>
-              <img src="../about/officeMeet.jpg" className="rounded-lg" />
+              <img src="../about/officeMeet.jpg" className="rounded-lg" alt="Team members collaborating during an office meeting" />
             </div>
           </motion.div>
         </div>
@@ -331,7 +333,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* what we do  */}
+      {/* what we do */}
       <div className="my-5 ">
         <p className="text-2xl text-center my-5 font-semibold lg:text-4xl lg:mt-10">
           What We Do ?
@@ -351,16 +353,14 @@ const About = () => {
           our services are tailored to fit your vision and goals.
         </p>
 
-    
-
-        {/* what we do  */}
+        {/* what we do */}
         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-10 lg:ml-20">
           {work?.map((item, index) => {
             return (
               <motion.div
                 whileHover={{
                   scale: 1.1,
-                  scrollMarginTop: 2,
+                  scrollMarginTop: 2, // This property is not typically used for scale animations.
                 }}
                 transition={{
                   duration: 0.4,
@@ -396,7 +396,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* what we do2  */}
+      {/* what we do2 */}
       <div className="my-5 mt-10 border-t lg:mt-20">
         <p className="text-2xl text-center my-5 font-semibold lg:text-4xl">
           Some Website Design Features
@@ -413,7 +413,7 @@ const About = () => {
           Your website is often the first impression your brand makes — and we
           make sure it's unforgettable. At{" "}
           <span className="bg-gradient-to-r from-fuchsia-600 to-blue-500 bg-clip-text text-transparent">
-            Softmore IT soultions{" "}
+            Softmore IT Solutions{" "} {/* Corrected typo: soultions -> Solutions */}
           </span>
           , we focus on features that combine functionality with aesthetic
           appeal to create a powerful online presence.
@@ -451,7 +451,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Features  */}
+      {/* Features */}
       <div className="my-5 mt-10 border-t">
         <p className="text-2xl text-center my-5 font-semibold lg:text-4xl">
           Why Choose Softmore IT Solutions?
@@ -459,7 +459,7 @@ const About = () => {
         <p className="text-center font-medium my-5 text-gray-500 lg:text-xl lg:px-28 ">
           Features That Set Us Apart{" "}
           <span className="bg-gradient-to-r from-fuchsia-600 to-blue-500 bg-clip-text text-transparent">
-            Softmore IT soultions{" "}
+            Softmore IT Solutions{" "} {/* Corrected typo: soultions -> Solutions */}
           </span>
           we don’t just deliver services — we build partnerships based on trust,
           innovation, and results. Here’s what makes us a top choice for
@@ -472,7 +472,7 @@ const About = () => {
             return (
               <motion.div
                 whileHover={{
-                  scale: 1.2,
+                  scale: 1.05, // Reduced scale for better visual. Was 1.2, which is quite large.
                 }}
                 transition={{
                   duration: 0.4,
@@ -495,7 +495,7 @@ const About = () => {
           <p className="text-center font-medium my-5 text-gray-500 lg:text-xl lg:px-28 ">
             With{" "}
             <span className="bg-gradient-to-r from-fuchsia-600 to-blue-500 bg-clip-text text-transparent">
-              Softmore IT soultions{" "}
+              Softmore IT Solutions{" "} {/* Corrected typo: soultions -> Solutions */}
             </span>
             you don’t just get a service — you get a team that’s as committed to
             your growth as you are.

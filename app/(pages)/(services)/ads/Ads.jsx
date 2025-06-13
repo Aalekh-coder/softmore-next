@@ -1,9 +1,7 @@
-
 "use client"
-
-import Form from "@/components/Form";
-import FormDilog from "@/components/Layout/FormDilog";
-import Button from "@/components/miniComp/button/Button";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input"; // Although Input is imported, it's not used in this specific component.
 import {
   CircleCheckBig,
   Facebook,
@@ -18,7 +16,6 @@ import {
   Youtube,
 } from "lucide-react";
 import React from "react";
-
 
 
 const AdService = () => {
@@ -86,10 +83,10 @@ const AdService = () => {
   ];
   return (
     <>
-    
       <div className="flex flex-col md:flex-row-reverse md:px-8 md:py-10 lg:px-16">
         <div className="px-5 md:w-1/2">
-          <img src="../ads/ads-Photoroom.png" alt="" />
+          {/* Added alt tag */}
+          <img src="../ads/ads-Photoroom.png" alt="Digital advertising campaigns and analytics dashboard" />
         </div>
 
         <div className="text-center md:w-1/2 lg:text-left">
@@ -113,7 +110,7 @@ const AdService = () => {
             Request A Free Quote
           </button> */}
 
-         <Form />
+          <Form />
         </div>
       </div>
 
@@ -153,13 +150,17 @@ const AdService = () => {
           <Play />
         </div>
         <div className="px-5 md:w-1/2 flex gap-2 mt-5 lg:pr-20">
+          {/* Added alt tag */}
           <img
             src="../ads/reel.jpg"
-            className="rounded-xl h-[35vh] md:h-[35vh]  lg:h-[70vh]"
+            className="rounded-xl h-[35vh] md:h-[35vh] lg:h-[70vh]"
+            alt="Short video reel on a mobile phone, showcasing social media content"
           />
+          {/* Added alt tag */}
           <img
             src="../ads/reel2.jpg"
             className="rounded-xl h-[40vh] mt-20 md:h-[35vh] lg:h-[70vh]"
+            alt="Another short video reel on a mobile phone, focusing on engaging content"
           />
         </div>
 
@@ -183,13 +184,14 @@ const AdService = () => {
             Request A Free Quote
           </button> */}
 
-         <Form />
+          <Form />
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row md:px-8 md:py-10 lg:px-16">
         <div className="px-5 md:w-1/2">
-          <img src="../ads/test-Photoroom.png" alt="Ads Preview" />
+          {/* Added alt tag */}
+          <img src="../ads/test-Photoroom.png" alt="Digital advertising performance report and analytics" />
         </div>
 
         <div className="text-center md:w-1/2 lg:text-left">
@@ -231,8 +233,8 @@ const AdService = () => {
           </ul>
 
           <p className="mt-4 px-7 text-sm lg:text-base flex gap-5 mb-5">
-            <CircleCheckBig color="blue" /> Transparent Reports 
-            <CircleCheckBig color="blue" /> Certified Experts 
+            <CircleCheckBig color="blue" /> Transparent Reports{" "}
+            <CircleCheckBig color="blue" /> Certified Experts{" "}
             <CircleCheckBig color="blue" /> Scalable Campaigns
           </p>
 
@@ -247,7 +249,7 @@ const SeoCard = ({ icon, text, describe }) => {
   return (
     <div className="shadow-lg px-5 mx-5 my-5 py-5 border rounded-xl">
       <div className="flex items-center gap-5 font-medium text-xl">
-        {icon}
+        {icon} {/* Icons (JSX elements) don't use alt tags */}
         <h2>{text}</h2>
       </div>
       <p className="px-5 text-gray-500 text-[16px] mt-5">{describe}</p>

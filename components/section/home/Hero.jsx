@@ -1,4 +1,4 @@
- "use client" 
+"use client"
 
 import { motion } from "framer-motion";
 import Form from "@/components/Form";
@@ -32,9 +32,7 @@ const Hero = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-         
-            <Form />
-          
+          <Form />
         </motion.div>
       </motion.div>
 
@@ -46,10 +44,9 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <img
-          // src={computerImg}
           src="../home/Web-Designs-1-Photoroom.png"
-          className="max-w-[400px] md:max-w-[450px]  lg:max-w-[700px] "
-          alt="Computer"
+          className="max-w-[400px] md:max-w-[450px] lg:max-w-[700px] "
+          alt="Modern web design concept showcasing a high-performance website on a computer screen for sales generation." // Enhanced alt tag
         />
       </motion.div>
     </div>

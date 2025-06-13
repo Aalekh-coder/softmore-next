@@ -1,7 +1,8 @@
- "use client"
+"use client"
 import Button from "@/components/miniComp/button/Button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import React from "react"; // Ensure React is imported
 
 const Work = () => {
   const projects = [
@@ -50,6 +51,10 @@ const Work = () => {
           </div>
         </div>
         <div>
+          {/* This Project component likely displays a single, maybe highlighted project. */}
+          {/* Ensure the 'img', 'projectName', 'projectDescription' props are passed correctly here,
+              as className is the only prop currently used. Assuming it's pulling from 'projects' array
+              or has a default. For now, added a generic alt tag to the img inside Project component itself.*/}
           <Project className={"hidden md:block"} />
         </div>
       </div>
@@ -95,15 +100,18 @@ const Project = ({ img, projectName, projectDescription, className }) => {
       }}
       className={cn(" rounded-xl overflow-hidden mx-1 my-4", className)}
     >
-      <img src={img ? img : "../project/wanerlust3.jpg"} alt="projectImg" />
+      <img
+        src={img ? img : "../project/wanerlust3.jpg"}
+        alt={projectName ? `Screenshot of ${projectName} website` : "Example website project screenshot"} // Enhanced alt tag
+      />
       <div>
         <p className="font-medium my-1">
-          {projectName ? projectName : "Project Title gdgd"}
+          {projectName ? projectName : "Project Title"} {/* Updated default for clarity */}
         </p>
         <p className="text-gray-500">
           {projectDescription
             ? projectDescription
-            : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio libero odio vitae tempora. Quae consequatur est qui vitae itaque, iure ipsum eveniet sed voluptatibus sunt officia impedit repudiandae ex."}
+            : "A compelling digital solution designed to meet specific business objectives and deliver outstanding user experiences."} {/* Updated default description */}
         </p>
       </div>
     </motion.div>

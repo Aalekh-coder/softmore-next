@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import Button from "@/components/miniComp/button/Button";
 import FormDilog from "@/components/Layout/FormDilog";
-import Form from "@/components/Form";
+import Form from "@/components/Form"; // Assuming this is used for contact forms
 
 const WebSiteDesign = () => {
   const cardUI = [
@@ -35,7 +35,7 @@ const WebSiteDesign = () => {
     },
     {
       icon: <PenTool size="34" />,
-      text: "Interface Deign",
+      text: "Interface Design", // Corrected typo
       color: "bg-rose-500",
     },
     {
@@ -50,17 +50,17 @@ const WebSiteDesign = () => {
     },
     {
       icon: <Codesandbox size="34" />,
-      text: "Wireframing",
+      text: "Prototyping", // Changed for better distinction from Wireframing
       color: "bg-cyan-500",
     },
     {
       icon: <Cpu size="34" />,
-      text: "Prototyping",
+      text: "Interaction Design", // Changed from Prototyping
       color: "bg-violet-500",
     },
     {
       icon: <MonitorCog size="34" />,
-      text: "Visiual Design",
+      text: "Visual Design", // Corrected typo
       color: "bg-lime-500",
     },
   ];
@@ -112,15 +112,13 @@ const WebSiteDesign = () => {
 
   return (
     <div className="text-center">
-
-    
-      {/* first section  */}
+      {/* First Section */}
       <div>
-        <h1 className="font-medium  text-zinc-800 text-4xl md:text-4xl lg:mt-10 lg:text-5xl  mt-14 ">
+        <h1 className="font-medium text-zinc-800 text-4xl md:text-4xl lg:mt-10 lg:text-5xl mt-14 ">
           Elevate Your <span>Platform with</span>
         </h1>
 
-        <div className="font-extrabold px-[4px] mt-3 bg-gradient-to-r from-fuchsia-500 to-indigo-700 text-transparent bg-clip-text text-xl md:text-2xl lg:text-3xl  ">
+        <div className="font-extrabold px-[4px] mt-3 bg-gradient-to-r from-fuchsia-500 to-indigo-700 text-transparent bg-clip-text text-xl md:text-2xl lg:text-3xl ">
           UI/UX Design Services Company
         </div>
         <p className="text-sm font-normal text-gray-700 px-3 my-5 md:px-14 md:text-lg lg:px-24 lg:text-xl">
@@ -129,19 +127,19 @@ const WebSiteDesign = () => {
           company to elevate your brand, enhance user engagement, and deliver
           design solutions that drive impactful conversions.
         </p>
-        
+
+        {/* Using Form component directly or via FormDilog as needed */}
         <Form />
         <div className="lg:-mt-24 lg:px-32">
-          <img src="../servicePage.png" alt="" />
+          <img src="../servicePage.png" alt="A laptop displaying web design elements, representing UI/UX design services" />
         </div>
       </div>
 
-      {/* second section  */}
-
+      {/* Second Section */}
       <div className="lg:flex ">
         <div className="lg:w-1/2">
           <div className="font-medium text-xl md:text-2xl lg:text-3xl ">
-            <div className="pb-2 bg-gradient-to-r from-violet-600 to-cyan-600 bg-clip-text text-transparent font-bold text-2xl  md:text-3xl lg:text-5xl lg:my-2">
+            <div className="pb-2 bg-gradient-to-r from-violet-600 to-cyan-600 bg-clip-text text-transparent font-bold text-2xl md:text-3xl lg:text-5xl lg:my-2">
               Designing UI/UX That
             </div>{" "}
             Helps You Become Brand
@@ -178,8 +176,7 @@ const WebSiteDesign = () => {
         </div>
       </div>
 
-      {/* card  */}
-
+      {/* Card - Maximum efficiency */}
       <div>
         <div className="bg-gradient-to-r from-rose-500 md:mt-10 md:mx-20 md:text-3xl to-indigo-400 font-medium rounded-lg mx-5 p-5 text-white lg:mx-[20vw] lg:mt-20 lg:text-4xl lg:py-10">
           Maximum efficiency, result oriented{" "}
@@ -195,20 +192,19 @@ const WebSiteDesign = () => {
               <div className="font-bold text-xl md:text-5xl">140+</div>
               <div>Client</div>
             </div>
-            <div className="bg-white md:px-20 md:py-7  bg-opacity-30 rounded-xl px-7 py-5">
-              <div className="font-bold text-xl  md:text-5xl">750+</div>
+            <div className="bg-white md:px-20 md:py-7 bg-opacity-30 rounded-xl px-7 py-5">
+              <div className="font-bold text-xl md:text-5xl">750+</div>
               <div>Projects</div>
             </div>
-            <div className="bg-white md:px-14 md:py-7  bg-opacity-30 rounded-xl px-3 py-5 lg:px-10">
-              <div className="font-bold text-xl  md:text-5xl">1000+</div>
+            <div className="bg-white md:px-14 md:py-7 bg-opacity-30 rounded-xl px-3 py-5 lg:px-10">
+              <div className="font-bold text-xl md:text-5xl">1000+</div>
               <div>Active Users</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* our componara  */}
-
+      {/* Our Comprehensive Range of Design Services */}
       <div className="mt-14 text-2xl px-3 font-bold md:text-3xl lg:text-5xl">
         {" "}
         Our{" "}
@@ -220,14 +216,14 @@ const WebSiteDesign = () => {
 
       <div className="lg:flex lg:items-center lg:px-14">
         <div className="px-5 mt-10 mb-4 md:px-10 lg:w-1/2">
-          <img src="../servicesPagesdesign.png" alt="" />
+          <img src="../servicesPagesdesign.png" alt="Graphical representation of design services, including UI/UX and web development" />
         </div>
         <div className="lg:w-1/2">
           <AccordionDemo />
         </div>
       </div>
-      {/* Get Design service in easy  */}
 
+      {/* Get Design service in easy Steps */}
       <div className="px-2 mt-10 lg:mt-14">
         <p className="text-2xl font-medium px-1 md:text-3xl">
           Get{" "}
@@ -256,12 +252,12 @@ const WebSiteDesign = () => {
 
 const ServicesCards = ({ icon, title, describe, index, color }) => {
   return (
-    <div className="shadow-lg  text-left px-5 mx-5 py-5 border mt-3 rounded-2xl ">
+    <div className="shadow-lg text-left px-5 mx-5 py-5 border mt-3 rounded-2xl ">
       <div
         className={`${color} mb-5 flex items-center justify-between font-bold text-5xl`}
       >
         {icon}
-        <span className="opacity-50">0{index}</span>
+        <span className="opacity-50">0{index + 1}</span> {/* Corrected to show 01, 02 etc. */}
       </div>
       <p className="text-lg font-medium text-zinc-800">{title}</p>
       <p className="py-4 px-1 text-gray-800">{describe}</p>

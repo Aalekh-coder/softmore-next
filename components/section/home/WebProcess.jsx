@@ -83,7 +83,7 @@ const WebProcess = () => {
       <p className="px-3 text-sm font-semibold md:px-16 md:text-lg lg:text-center lg:px-32">
         At the heart of everything we do is a clear, purposeful approach to making progress — not just moving fast, but moving smart. Our process is designed to be flexible, collaborative, and results-driven. Here’s how we make things happen
       </p>
-      <div  style={{x}} className="w-full overflow-x-scroll grid grid-flow-col lg:px-24">
+      <div style={{x}} className="w-full overflow-x-scroll grid grid-flow-col lg:px-24">
         {processCardItems?.map((item, index) => (
           <ProcessCard
             key={index}
@@ -102,13 +102,42 @@ const WebProcess = () => {
 export default WebProcess;
 
 const ProcessCard = ({ img, title, description, tagLine, points }) => {
+  // Determine alt text based on the image source or title
+  const getAltText = (imagePath, cardTitle) => {
+    switch (imagePath) {
+      case "../home/focus.png":
+        return "Illustration representing clarity and focused goal setting for a project.";
+      case "../home/plan.jpg":
+        return "Visual depicting strategic planning with a team, symbolizing purpose-driven development.";
+      case "../home/colllabe.png":
+        return "Illustration showing seamless team collaboration and communication.";
+      case "../home/execution.jpg":
+        return "Image symbolizing swift execution and rapid progress on tasks, driving results.";
+      case "../home/refine.jpg":
+        return "Visual representing the process of reflection, feedback, and continuous refinement in a project.";
+      default:
+        return cardTitle ? `${cardTitle} process step` : "Process illustration";
+    }
+  };
+
   return (
     <div className="w-[90vw] mx-5 mt-8 md:px-5 md:mx-2 lg:w-[50vw] md:w-[55vw] lg:my-10">
-      <img src={img} className="rounded-lg h-[35vh] lg:h-[40vh]" alt={title} />
+      <img
+        src={img}
+        className="rounded-lg h-[35vh] lg:h-[40vh]"
+        alt={getAltText(img, title)} // Dynamic alt tag
+      />
       <p className="px-2 py-3 bg-gradient-to-r from-amber-400 to-rose-500 font-bold text-2xl bg-clip-text text-transparent md:w-[40vw] lg:text-3xl">
         {title}
       </p>
       <p className="px-2 font-semibold text-sm md:w-[40vw] lg:text-lg">{description}</p>
+      {/* Additional content (tagLine and points) can be rendered here if needed */}
+      {/* Example:
+      <p className="px-2 mt-2 text-sm text-gray-700">{tagLine}</p>
+      <ul className="list-disc pl-8 text-sm text-gray-700">
+        {points?.map((point, idx) => <li key={idx}>{point}</li>)}
+      </ul>
+      */}
     </div>
   );
 };

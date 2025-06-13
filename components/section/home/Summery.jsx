@@ -1,4 +1,4 @@
- "use client"
+"use client"
 
 import { easeInOut, motion, useAnimation } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -8,11 +8,10 @@ const Summery = () => {
   return (
     <div
       className="w-full px-2 overflow-hidden mt-10 pt-5 lg:mt-10 lg:border-b lg:pb-10"
-      // style={{ fontFamily: "'Cal Sans', sans-serif" }}
+      // style={{ fontFamily: "'Cal Sans', sans-serif" }} // Font styling is typically handled globally or via Tailwind config
     >
       <motion.h2 
-        
-      className="text-2xl md:text-3xl md:text-left lg:text-center lg:text-4xl px-1 text-center bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mb-5 font-bold">
+        className="text-2xl md:text-3xl md:text-left lg:text-center lg:text-4xl px-1 text-center bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent mb-5 font-bold">
         Design with Purpose, Code with Precision, Deliver with Pride
       </motion.h2>
 
@@ -23,6 +22,7 @@ const Summery = () => {
           whileInView={{ opacity: 1, x: 0 }}
           src="../home/hero-summar.png"
           className="mt-4 rounded-lg lg:w-1/2"
+          alt="Abstract representation of digital growth and website development, showcasing data and progress." // Added alt tag
         />
 
         <motion.div
@@ -38,7 +38,7 @@ const Summery = () => {
           has been redefining digital excellence for ambitious businesses
           worldwide. We don’t just build websites or run campaigns—we engineer
           measurable growth through:
-          <ul className="mt-5">
+          <ul className="mt-5 space-y-3"> {/* Added space-y-3 for better spacing */}
             <li className="">
               <div className="font-semibold">Websites That Convert </div>
               High-performance designs blending aesthetics with revenue-driving
@@ -56,7 +56,6 @@ const Summery = () => {
               Distinctive visual storytelling to make your mark unforgettable
             </li>
           </ul>
-     
         </motion.div>
       </div>
     </div>
@@ -64,12 +63,3 @@ const Summery = () => {
 };
 
 export default Summery;
-
-<motion.p
-  className="font-extrabold text-4xl mt-6 md:text-5xl md:mt-9 lg:text-8xl bg-gradient-to-r from-fuchsia-600 to-indigo-600 bg-clip-text text-transparent"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3, duration: 0.8 }}
->
-  We Don’t Just Build Websites — We Build Sales Machines
-</motion.p>;
